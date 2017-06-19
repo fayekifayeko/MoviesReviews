@@ -1,1 +1,18 @@
-Search Page
+<div class="search">
+    <h1>Here you can search a specific movie by title</h1>
+    <p class="lead">Write a movie title</p>
+    <form>
+        <div class="form-group">
+           <input type="text" name="searchStr" (keyup)="searchMovie()" [(ngModel)]="searchStr" class="form-control" placeholder="search movies">
+        </div>
+    </form>
+    <div *ngIf="reviews">
+        <div *ngFor="let review of reviews">
+          <div class="col-md-12">
+              <div class="well">
+               <a routerLink="/summary/{{review.summary_short}}"><h3>{{review.display_title}}</h3></a>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
