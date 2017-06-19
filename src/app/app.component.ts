@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
+import { ReviewsService } from './services/reviews.service';
 
 @Component({
+  moduleId:module.id,
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+  templateUrl: `app.component.html`,
+  providers:[ReviewsService]
 })
+
 export class AppComponent  { name = 'Angular'; }

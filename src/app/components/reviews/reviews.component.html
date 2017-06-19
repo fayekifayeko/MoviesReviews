@@ -1,0 +1,15 @@
+<div *ngIf="reviews" class="review">
+    <div class="row">
+        <div class="col-md-6 well" *ngFor="let review of reviews">
+            <img class="img-circle text-center review-img" src="{{review.multimedia.src}}">
+            <h6 class="text-center">{{review.display_title}}</h6>
+            <strong>{{review.headline}}</strong><br>
+           <strong> By: </strong><span>{{review.byline}}</span><br>
+           <strong> published at: </strong><span>{{review.publication_date}}</span><br>
+           <strong> last update: </strong><span>{{review.date_updated}}</span><br>
+           <strong>summary:  </strong><span>{{review.summary_short}}</span><br>
+           <strong>read more at: </strong>
+           <a href="{{review.link.url}}">{{review.link.suggested_link_text}}</a>
+        </div>
+    </div>
+</div>
